@@ -1,20 +1,27 @@
 @import "../../../assets/scss/vars.scss";
 
 .navbar {
-    position: fixed;
-    width: 100%;
+    background-color: $nav-bar-bg;
     display: flex;
-    align-items: center;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 2rem;
     height: 7rem;
-    background: $nav-bar-bg;
-    padding: 1rem;
-    box-shadow: 0 0 0.8rem 0.8rem rgba(0, 0, 0, 0.705);
-
+    width: 100vw;
+    z-index: 2;
+    box-shadow: 0px 0px 5px 2px #000;
     .navbar-title {
         font-weight: bold;
         text-transform: uppercase;
-        letter-spacing: 0.2rem;
-        color: #fff;
-        margin-left: 2rem;
+        letter-spacing: 0.3rem;
+    }
+    &::before {
+        display: block;
+        font-size: 0;
+        content: " ";
+        clear: both;
+        // margin-bottom: 20rem;
     }
 }
