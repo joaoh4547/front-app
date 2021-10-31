@@ -1,8 +1,12 @@
 @import "../../../assets/scss/vars.scss";
 
 .product-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
     height: 37rem;
-    background-color: $info-color;
+    background-color: #fff;
     padding: 1rem;
     border-radius: 0.7rem;
 
@@ -10,5 +14,10 @@
         text-align: center;
         text-overflow: ellipsis;
         font-size: 2rem;
+    }
+
+    .product-image {
+        width: 25rem;
+        height: 25rem;
     }
 }

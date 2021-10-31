@@ -12,6 +12,7 @@ import { ContainerComponent } from './ui/container/container.component';
 import { ProductCardComponent } from './ui/product-card/product-card.component';
 import { ProductsListComponent } from './ui/products-list/products-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ProductComponent } from './pages/product/product.component';
 
 @NgModule({
     declarations: [
@@ -23,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
         ContainerComponent,
         ProductCardComponent,
         ProductsListComponent,
+        ProductComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule],
     providers: [ProductsService],

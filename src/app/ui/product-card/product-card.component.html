@@ -1,3 +1,11 @@
-<div class="product-card">
-    <h2 class="product-card-title">{{ product.name }}</h2>
-</div>
+<a routerLink="/produto/{{ product.id }}">
+    <div class="product-card">
+        <h2 class="product-card-title">{{ product.name }}</h2>
+        <img
+            class="product-image"
+            [src]="product.imageUrl"
+            loading="eager"
+            [alt]="product.name"
+        />
+    </div>
+</a>
