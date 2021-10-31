@@ -1,0 +1,40 @@
+.product-container {
+    background-color: #fff;
+    padding: 2rem;
+    margin-bottom: 8rem;
+
+    .product-title {
+        font-size: 2.1rem;
+        text-transform: uppercase;
+        color: rgb(43, 43, 43);
+        letter-spacing: 0.2rem;
+    }
+
+    .product-info {
+        padding: 2rem;
+        margin-top: 5rem;
+        display: flex;
+        gap: 2rem;
+
+        .product-image {
+            img {
+                max-height: 60rem;
+                max-width: 60rem;
+            }
+        }
+    }
+    .product-info-description {
+        margin-bottom: 2rem;
+        span {
+            font-weight: bold;
+            line-height: 12rem;
+        }
+        p {
+            text-align: justify;
+            text-indent: 3rem;
+        }
+    }
+    .product-info-price {
+        font-weight: bolder;
+    }
+}

@@ -1,5 +1,5 @@
 import { ProductsService } from 'src/app/services/products.service';
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -13,7 +13,10 @@ import { ProductCardComponent } from './ui/product-card/product-card.component';
 import { ProductsListComponent } from './ui/products-list/products-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ProductComponent } from './pages/product/product.component';
+import { registerLocaleData } from '@angular/common';
+import localePt from '@angular/common/locales/pt';
 
+registerLocaleData(localePt);
 @NgModule({
     declarations: [
         AppComponent,
@@ -27,7 +30,7 @@ import { ProductComponent } from './pages/product/product.component';
         ProductComponent,
     ],
     imports: [BrowserModule, AppRoutingModule, HttpClientModule],
-    providers: [ProductsService],
+    providers: [ProductsService, { provide: LOCALE_ID, useValue: 'pt-BR' }],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

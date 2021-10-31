@@ -15,4 +15,10 @@ export class ProductsService {
     getAllProducts() {
         return this.http.get<Product[]>('http://localhost:5000/api/products');
     }
+
+    getById(id: number) {
+        return this.http.get<Product>(
+            `http://localhost:5000/api/products/${id}`
+        );
+    }
 }

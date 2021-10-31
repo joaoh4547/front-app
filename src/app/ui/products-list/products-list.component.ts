@@ -12,6 +12,7 @@ import { Product } from 'src/app/models/product';
 export class ProductsListComponent implements OnInit {
     products: Product[];
     constructor(private productsService: ProductsService) {}
+
     getAllProducts() {
         this.productsService
             .getAllProducts()
@@ -22,6 +23,5 @@ export class ProductsListComponent implements OnInit {
 
     ngOnInit(): void {
         this.getAllProducts();
-        console.log(this.products);
     }
 }

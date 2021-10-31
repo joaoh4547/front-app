@@ -1,1 +1,20 @@
-<p>product works!</p>
+<app-container [fluid]="false">
+    <div class="product-container">
+        <h1 class="product-title">{{ product.name }}</h1>
+        <div class="product-info">
+            <div class="product-image">
+                <img [src]="product.imageUrl" />
+            </div>
+            <div class="product-info-wrapper">
+                <div class="product-info-description">
+                    <span>Descrição:</span>
+                    <p>{{ product.description }}</p>
+                </div>
+                <div class="product-info-price">
+                    <span>Preço: </span>
+                    <span>{{ product.price | currency: "BRL" }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</app-container>
