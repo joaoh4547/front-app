@@ -1,4 +1,14 @@
+@import "../../../assets/scss/vars.scss";
+
 .product-card {
-    height: 32rem;
-    background-color: red;
+    height: 37rem;
+    background-color: $info-color;
+    padding: 1rem;
+    border-radius: 0.7rem;
+
+    .product-card-title {
+        text-align: center;
+        text-overflow: ellipsis;
+        font-size: 2rem;
+    }
 }

@@ -16,6 +16,11 @@
         font-weight: bold;
         text-transform: uppercase;
         letter-spacing: 0.3rem;
+        color: inherit;
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
     &::before {
         display: block;
