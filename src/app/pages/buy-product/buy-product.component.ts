@@ -1,7 +1,7 @@
 import { Product } from 'src/app/models/product';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faMinus, faCartPlus } from '@fortawesome/free-solid-svg-icons';
 @Component({
     selector: 'app-buy-product',
     templateUrl: './buy-product.component.html',
@@ -13,6 +13,7 @@ export class BuyProductComponent implements OnInit {
     quantity = 0;
     addIcon = faPlus;
     removeIcon = faMinus;
+    cartIcon = faCartPlus;
     add() {
         this.quantity += 1;
     }

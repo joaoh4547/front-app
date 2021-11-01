@@ -30,7 +30,9 @@
                 Total: {{ total() | currency: "BRL" }}
             </p>
             <div>
-                <button (click)="buy()">Adicionar ao carrinho</button>
+                <button class="buy-product-btn" (click)="buy()">
+                    Adicionar ao carrinho <fa-icon [icon]="cartIcon"></fa-icon>
+                </button>
             </div>
         </div>
     </div>

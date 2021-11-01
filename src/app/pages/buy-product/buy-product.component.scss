@@ -32,10 +32,26 @@
         margin-top: 5rem;
         display: flex;
         justify-content: flex-end;
+        align-items: center;
         gap: 2rem;
         .buy-product-total {
             text-transform: uppercase;
             font-weight: bold;
+        }
+
+        .buy-product-btn {
+            border-radius: 0.4rem;
+            border: none;
+            outline: none;
+            font-size: 2rem;
+            height: 7rem;
+            padding: 2rem;
+            background-color: $success-color;
+            cursor: pointer;
+
+            &:hover {
+                background-color: darken($color: $success-color, $amount: 5);
+            }
         }
     }
     .buy-product-quantity-btn {
