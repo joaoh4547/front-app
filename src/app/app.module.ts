@@ -18,6 +18,8 @@ import localePt from '@angular/common/locales/pt';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BuyProductComponent } from './pages/buy-product/buy-product.component';
 import { FinishOrContinueComponent } from './pages/finish-or-continue/finish-or-continue.component';
+import { ShoppingBadgeComponent } from './ui/shopping-badge/shopping-badge.component';
+import { ShoppingCartService } from './services/shopping-cart.service';
 
 registerLocaleData(localePt);
 @NgModule({
@@ -33,6 +35,7 @@ registerLocaleData(localePt);
         ProductComponent,
         BuyProductComponent,
         FinishOrContinueComponent,
+        ShoppingBadgeComponent,
     ],
     imports: [
         BrowserModule,
@@ -40,7 +43,11 @@ registerLocaleData(localePt);
         HttpClientModule,
         FontAwesomeModule,
     ],
-    providers: [ProductsService, { provide: LOCALE_ID, useValue: 'pt-BR' }],
+    providers: [
+        ProductsService,
+        { provide: LOCALE_ID, useValue: 'pt-BR' },
+        ShoppingCartService,
+    ],
     bootstrap: [AppComponent],
 })
 export class AppModule {}

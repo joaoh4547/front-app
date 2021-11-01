@@ -1,0 +1,16 @@
+.shopping-badge {
+    margin-right: 5rem;
+    .badge-quantity {
+        display: flex;
+        position: relative;
+        height: 2.1rem;
+        width: 2.1rem;
+        top: -3.2rem;
+        left: 1.5rem;
+        background-color: #000;
+        // padding: 1.7rem;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+    }
+}
