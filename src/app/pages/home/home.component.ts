@@ -7,9 +7,6 @@ import { Component, Input, OnInit } from '@angular/core';
     styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-    constructor(private route: ActivatedRoute) {}
-
-    ngOnInit(): void {
-        console.log(history.state);
-    }
+    constructor() {}
+    ngOnInit(): void {}
 }

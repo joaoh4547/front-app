@@ -51,5 +51,11 @@
         border: none;
         font-size: 2rem;
         cursor: pointer;
+        transition: all 0.2s linear;
+        &:hover {
+            transform: scale(1.08);
+            box-shadow: 0 0 0.4rem 0.2rem rgb(63, 76, 97);
+            background-color: darken($color: $primary-color, $amount: 12);
+        }
     }
 }

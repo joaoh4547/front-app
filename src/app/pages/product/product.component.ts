@@ -23,7 +23,7 @@ export class ProductComponent implements OnInit {
                 product: this.product,
             },
         };
-        this.router.navigate(['/'], extra);
+        this.router.navigate(['/produto/1/comprar'], extra);
     }
     ngOnInit(): void {
         const id: number = this.route.snapshot.params['id'];

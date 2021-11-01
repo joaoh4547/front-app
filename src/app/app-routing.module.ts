@@ -1,3 +1,4 @@
+import { BuyProductComponent } from './pages/buy-product/buy-product.component';
 import { ProductComponent } from './pages/product/product.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -13,8 +14,17 @@ const routes: Routes = [
         component: HomeComponent,
     },
     {
-        path: 'produto/:id',
-        component: ProductComponent,
+        path: 'produto',
+        children: [
+            {
+                path: ':id',
+                component: ProductComponent,
+            },
+            {
+                path: ':id/comprar',
+                component: BuyProductComponent,
+            },
+        ],
     },
 ];
 
