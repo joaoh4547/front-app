@@ -1,14 +1,7 @@
 import { Product } from 'src/app/models/product';
 import { Component, OnInit } from '@angular/core';
-import {
-    ActivatedRoute,
-    NavigationStart,
-    Router,
-    RouterState,
-} from '@angular/router';
-import { Observable } from 'rxjs';
-import { filter, map } from 'rxjs/operators';
-
+import { Router } from '@angular/router';
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
 @Component({
     selector: 'app-buy-product',
     templateUrl: './buy-product.component.html',
@@ -18,13 +11,18 @@ export class BuyProductComponent implements OnInit {
     constructor(private router: Router) {}
     product: Product;
     quantity = 0;
-
-    total() {
-        return this.product.price * this.quantity;
-    }
-
+    addIcon = faPlus;
+    removeIcon = faMinus;
     add() {
         this.quantity += 1;
+    }
+    remove() {
+        if (this.quantity - 1 >= 0) {
+            this.quantity -= 1;
+        }
+    }
+    total() {
+        return this.product.price * this.quantity;
     }
 
     buy() {
@@ -32,12 +30,6 @@ export class BuyProductComponent implements OnInit {
             alert('A quantidade deve ser superior a zero !!!');
         } else {
             this.router.navigate(['/finalizar_ou_continuar']);
-        }
-    }
-
-    remove() {
-        if (this.quantity - 1 >= 0) {
-            this.quantity -= 1;
         }
     }
 

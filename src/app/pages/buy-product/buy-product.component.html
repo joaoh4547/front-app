@@ -9,10 +9,20 @@
                 <p>{{ product.name }}</p>
             </div>
             <div>
-                <span>Quantidade</span>
-                <button (click)="add()">+</button>
-                <span>{{ quantity }}</span>
-                <button (click)="remove()">-</button>
+                <span class="buy-product-quantity">Quantidade</span>
+                <button
+                    class="buy-product-quantity-btn btn-add"
+                    (click)="add()"
+                >
+                    <fa-icon [icon]="addIcon"></fa-icon>
+                </button>
+                <span class="buy-product-info-quantity">{{ quantity }}</span>
+                <button
+                    (click)="remove()"
+                    class="buy-product-quantity-btn btn-remove"
+                >
+                    <fa-icon [icon]="removeIcon"></fa-icon>
+                </button>
             </div>
         </div>
         <div class="buy-product-footer">

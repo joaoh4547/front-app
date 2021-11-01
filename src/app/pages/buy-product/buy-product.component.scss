@@ -1,3 +1,4 @@
+@import "../../../assets/scss/vars.scss";
 .buy-product {
     background-color: #fff;
     padding: 2rem;
@@ -17,6 +18,16 @@
             max-width: 40rem;
         }
     }
+    .buy-product-info-quantity {
+        border-radius: 1rem;
+        display: inline-block;
+        font-weight: bold;
+        font-size: 2rem;
+        border: 1px solid rgba(0, 110, 255, 0.432);
+        width: 10rem;
+        padding: 2rem;
+        text-align: center;
+    }
     .buy-product-footer {
         margin-top: 5rem;
         display: flex;
@@ -25,6 +36,30 @@
         .buy-product-total {
             text-transform: uppercase;
             font-weight: bold;
+        }
+    }
+    .buy-product-quantity-btn {
+        border-radius: 1rem;
+        margin: 1rem;
+        height: 6rem;
+        width: 7rem;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transition: all linear 0.5s;
+    }
+
+    .btn-add {
+        background-color: $primary-color;
+        &:hover {
+            background-color: darken($color: $primary-color, $amount: 5);
+        }
+    }
+
+    .btn-remove {
+        background-color: $danger-color;
+        &:hover {
+            background-color: darken($color: $danger-color, $amount: 5);
         }
     }
 }
