@@ -17,6 +17,7 @@ import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BuyProductComponent } from './pages/buy-product/buy-product.component';
+import { FinishOrContinueComponent } from './pages/finish-or-continue/finish-or-continue.component';
 
 registerLocaleData(localePt);
 @NgModule({
@@ -31,6 +32,7 @@ registerLocaleData(localePt);
         ProductsListComponent,
         ProductComponent,
         BuyProductComponent,
+        FinishOrContinueComponent,
     ],
     imports: [
         BrowserModule,

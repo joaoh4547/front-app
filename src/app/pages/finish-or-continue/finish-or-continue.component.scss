@@ -1,0 +1,50 @@
+@import "../../../assets/scss/vars.scss";
+
+.finish-or-continue {
+    height: 80rem;
+    background-color: #fff;
+    display: flex;
+    padding: 2rem;
+    flex-direction: column;
+    h1 {
+        font-size: 3.1rem;
+        text-align: center;
+        color: #333;
+    }
+
+    .actions {
+        margin-top: 25rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 7rem;
+        .btn {
+            border-radius: 0.4rem;
+            padding: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            transition: all 0.2s ease-in-out;
+            min-height: 8rem;
+            gap: 1rem;
+        }
+
+        .btn-continue {
+            background-color: $info-color;
+
+            &:hover {
+                background-color: darken($color: $info-color, $amount: 10);
+                box-shadow: 0 0 0.8rem 0.5rem rgb(189, 172, 184);
+            }
+        }
+        .btn-finish {
+            background-color: $danger-color;
+
+            &:hover {
+                background-color: darken($color: $danger-color, $amount: 10);
+                box-shadow: 0 0 0.8rem 0.5rem rgb(189, 172, 184);
+            }
+        }
+    }
+}

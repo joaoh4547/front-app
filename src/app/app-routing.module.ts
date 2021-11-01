@@ -1,3 +1,4 @@
+import { FinishOrContinueComponent } from './pages/finish-or-continue/finish-or-continue.component';
 import { BuyProductComponent } from './pages/buy-product/buy-product.component';
 import { ProductComponent } from './pages/product/product.component';
 import { NgModule } from '@angular/core';
@@ -25,6 +26,10 @@ const routes: Routes = [
                 component: BuyProductComponent,
             },
         ],
+    },
+    {
+        path: 'finalizar_ou_continuar',
+        component: FinishOrContinueComponent,
     },
 ];
 
