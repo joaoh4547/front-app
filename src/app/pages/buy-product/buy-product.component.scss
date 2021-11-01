@@ -1,0 +1,30 @@
+.buy-product {
+    background-color: #fff;
+    padding: 2rem;
+    .buy-product-info-wrapper {
+        display: flex;
+        align-items: center;
+    }
+    .buy-product-info {
+        margin-top: 2rem;
+        display: flex;
+        gap: 3rem;
+        align-items: center;
+        img {
+            max-height: 20rem;
+        }
+        p {
+            max-width: 40rem;
+        }
+    }
+    .buy-product-footer {
+        margin-top: 5rem;
+        display: flex;
+        justify-content: flex-end;
+        gap: 2rem;
+        .buy-product-total {
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+    }
+}

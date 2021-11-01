@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
+import { Title } from '@angular/platform-browser';
 @Component({
     selector: 'app-product',
     templateUrl: './product.component.html',
@@ -12,7 +13,8 @@ export class ProductComponent implements OnInit {
     constructor(
         private route: ActivatedRoute,
         private productsService: ProductsService,
-        private router: Router
+        private router: Router,
+        private titleService: Title
     ) {}
     product: Product;
     ShopIcon = faShoppingCart;
@@ -29,6 +31,13 @@ export class ProductComponent implements OnInit {
         const id: number = this.route.snapshot.params['id'];
         this.productsService
             .getById(id)
-            .subscribe((product) => (this.product = product));
+            .subscribe(
+                (product) => (
+                    (this.product = product),
+                    this.titleService.setTitle(
+                        `FrontApp - Produto ${product.name}`
+                    )
+                )
+            );
     }
 }

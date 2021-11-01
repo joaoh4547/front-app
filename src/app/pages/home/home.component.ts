@@ -1,3 +1,4 @@
+import { Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, Input, OnInit } from '@angular/core';
 
@@ -7,6 +8,8 @@ import { Component, Input, OnInit } from '@angular/core';
     styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements OnInit {
-    constructor() {}
-    ngOnInit(): void {}
+    constructor(private titleService: Title) {}
+    ngOnInit(): void {
+        this.titleService.setTitle('FrontApp');
+    }
 }

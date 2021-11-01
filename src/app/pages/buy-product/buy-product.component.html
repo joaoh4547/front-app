@@ -1,1 +1,27 @@
-<p>{{ product.name }}</p>
+<app-container>
+    <div class="buy-product">
+        <div>
+            <span>Produto</span>
+        </div>
+        <div class="buy-product-info-wrapper">
+            <div class="buy-product-info">
+                <img [src]="product.imageUrl" alt="" />
+                <p>{{ product.name }}</p>
+            </div>
+            <div>
+                <span>Quantidade</span>
+                <button (click)="add()">+</button>
+                <span>{{ quantity }}</span>
+                <button (click)="remove()">-</button>
+            </div>
+        </div>
+        <div class="buy-product-footer">
+            <p class="buy-product-total">
+                Total: {{ total() | currency: "BRL" }}
+            </p>
+            <div>
+                <button (click)="buy()">Adicionar ao carrinho</button>
+            </div>
+        </div>
+    </div>
+</app-container>
