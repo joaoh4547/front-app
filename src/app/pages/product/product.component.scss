@@ -1,3 +1,5 @@
+@import "../../../assets/scss/vars.scss";
+
 .product-container {
     background-color: #fff;
     padding: 2rem;
@@ -23,6 +25,9 @@
             }
         }
     }
+    .product-info-wrapper {
+        margin-left: 5rem;
+    }
     .product-info-description {
         margin-bottom: 2rem;
         span {
@@ -35,6 +40,16 @@
         }
     }
     .product-info-price {
-        font-weight: bolder;
+        font-weight: bold;
+        margin-bottom: 5rem;
+    }
+    .product-buy-button {
+        border-radius: 0.4rem;
+        padding: 2rem;
+        background-color: $primary-color;
+        outline: none;
+        border: none;
+        font-size: 2rem;
+        cursor: pointer;
     }
 }

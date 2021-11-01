@@ -1,8 +1,8 @@
 import { ProductsService } from 'src/app/services/products.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, NavigationExtras, Router } from '@angular/router';
 import { Product } from 'src/app/models/product';
-
+import { faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 @Component({
     selector: 'app-product',
     templateUrl: './product.component.html',
@@ -11,9 +11,20 @@ import { Product } from 'src/app/models/product';
 export class ProductComponent implements OnInit {
     constructor(
         private route: ActivatedRoute,
-        private productsService: ProductsService
+        private productsService: ProductsService,
+        private router: Router
     ) {}
     product: Product;
+    ShopIcon = faShoppingCart;
+
+    onBuy() {
+        const extra: NavigationExtras = {
+            state: {
+                product: this.product,
+            },
+        };
+        this.router.navigate(['/'], extra);
+    }
     ngOnInit(): void {
         const id: number = this.route.snapshot.params['id'];
         this.productsService
